@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS高级测试专用页</title>
     <script>
-        var a = {name:'A'}
-        function fn(obj){
-            obj = {name:'B'}
-            console.log(obj.name);
+        function Person(color) {
+            console.log(color);
+            this.color = color;
+            this.getColor = function () {
+                console.log(this)
+                return this.color
+            }
+            this.setColor = function () {
+                console.log(this)
+                this.color = color
+            }
         }
-        fn(a)
-        console.log(a.name);
+        Person.prototype.test = function(){
+            console.log('test01');
+        }
+
+        var p = new Person('111')
+        // Person.test()
+        p.test()
+        console.log(p.prototype);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
