@@ -7,26 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS高级测试专用页</title>
     <script>
-        function Person(color) {
-            console.log(color);
-            this.color = color;
-            this.getColor = function () {
-                console.log(this)
-                return this.color
-            }
-            this.setColor = function () {
-                console.log(this)
-                this.color = color
-            }
+        var a = 4
+        function fn(){
+            console.log(a);
         }
-        Person.prototype.test = function(){
-            console.log('test01');
-        }
-
-        var p = new Person('111')
-        // Person.test()
-        p.test()
-        console.log(p.prototype);
+        fn()
     </script>
 </head>
 
